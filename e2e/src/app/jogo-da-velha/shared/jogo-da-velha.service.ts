@@ -3,22 +3,25 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class JogoDaVelhaService {
 
-  private readonly TAM_TAB: number = 3; // TAM_TAB tamanho do tabuleiro; 3x3 
-  private readonly X: number = 1; // Representação da peça número 1: X 
-  private readonly O: number = 2; // Representação da peça número 2: O (Círculo)
-  private readonly VAZIO: number = 0; // Representação do numero 0
+ /* CONSTANTES
+* readonly: significa que é um atributo que não será modificado. Representado com letras maiusculas para exemplificar
+*/
+private readonly TAM_TAB: number = 3; // TAM_TAB tamanho do tabuleiro; 3x3 
+private readonly X: number = 1; // Representação da peça número 1: X 
+private readonly O: number = 2; // Representação da peça número 2: O (Círculo)
+private readonly VAZIO: number = 0; // Representação do numero 0
 
-  private tabuleiro: any; // Tabuleiro: array multidimensional, 3 linhas por 3 colunas (representação do tabuleiro)
-  private numMovimentos: number; // Número de Movimentos 
-  private vitoria: any; // Armazena as posições da Vitória. Guardará a posição das peças. 
+private tabuleiro: any; // Tabuleiro: array multidimensional, 3 linhas por 3 colunas (representação do tabuleiro)
+private numMovimentos: number; // Número de Movimentos 
+private vitoria: any; // Armazena as posições da Vitória. Guardará a posição das peças. 
 
+// Mostrará as mensagens de quem venceu ou perdeu
+private _jogador: number; // Jogador Corrente
 
-  private _jogador: number; // Jogador Corrente
-
-  // Representará em qual tempo elas devem exibir
-  private _showInicio: boolean; // Flag Booleana
-  private _showTabuleiro: boolean; // Flag Booleana
-  private _showFinal: boolean; // Flag Booleana
+// Representará em qual tempo elas devem exibir
+private _showInicio: boolean; // Flag Booleana
+private _showTabuleiro: boolean; // Flag Booleana
+private _showFinal: boolean; // Flag Booleana
 
   constructor() { }
 
