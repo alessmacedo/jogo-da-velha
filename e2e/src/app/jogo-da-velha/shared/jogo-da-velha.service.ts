@@ -104,7 +104,13 @@ export class JogoDaVelhaService {
    * @param number posY
    * @return void
    */
-  jogar(posX: number, posY: number): void {}
+  jogar(posX: number, posY: number): void {
+    // jogada inválida
+    if (this.tabuleiro[posX][posY] !== this.VAZIO || 
+      this.vitoria) {
+      return;
+    }
+  }
 
   fimJogo(linha: number, coluna: number, 
       tabuleiro: any, jogador: number) {}
