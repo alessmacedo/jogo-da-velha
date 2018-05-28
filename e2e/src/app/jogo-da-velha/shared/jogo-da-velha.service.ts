@@ -12,7 +12,7 @@ export class JogoDaVelhaService {
   private numMovimentos: number; // Número de Movimentos 
   private vitoria: any; // Armazena as posições da Vitória. Guardará a posição das peças. 
 
- 
+
   private _jogador: number; // Jogador Corrente
 
   // Representará em qual tempo elas devem exibir
@@ -28,7 +28,7 @@ export class JogoDaVelhaService {
    * @return void
    */
   inicializar(): void {
-    this._showInicio = true; 
+    this._showInicio = true;
     this._showTabuleiro = false;
     this._showFinal = false;
     this.numMovimentos = 0;
@@ -106,16 +106,25 @@ export class JogoDaVelhaService {
    */
   jogar(posX: number, posY: number): void {
     // jogada inválida
-    if (this.tabuleiro[posX][posY] !== this.VAZIO || 
+    if (this.tabuleiro[posX][posY] !== this.VAZIO ||
       this.vitoria) {
       return;
     }
+    this.tabuleiro[posX][posY] = this._jogador;
+    this.numMovimentos++;
+    this.vitoria = this.fimJogo(posX, posY,
+      this.tabuleiro, this._jogador);
+    this._jogador = (this._jogador === this.X) ? this.O : this.X;
+
+    if (!this.vitoria && this.numMovimentos < 9) {
+      this.cpuJogar();
+    }
   }
 
-  fimJogo(linha: number, coluna: number, 
-      tabuleiro: any, jogador: number) {}
+  fimJogo(linha: number, coluna: number,
+    tabuleiro: any, jogador: number) { }
 
-  cpuJogar(): void {}
+  cpuJogar(): void { }
 
   obterJogada(jogador: number) {
   }
@@ -160,7 +169,7 @@ export class JogoDaVelhaService {
    * @param number posY
    * @return boolean
    */
-  exibirVitoria(posX: number, posY: number) {}
+  exibirVitoria(posX: number, posY: number) { }
 
   /**
    * Inicializa um novo jogo, assim como exibe o tabuleiro.
