@@ -1,27 +1,20 @@
-# JogoDaVelha
+AngularJS é um framework JavaScript open-source que roda no lado do client(navegador), mantido pelo Google, que auxilia na execução de single-page applications. Seu objetivo é aumentar aplicativos que podem ser acessados por um navegador web, foi construído sob o padrão model-view-view-model (MVVM), em um esforço para facilitar tanto o desenvolvimento quanto o teste dos aplicativos.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.1.
+Sua popularidade no mercado é muito grande e utilizada por diversas empresas. E uma de suas vantagens se torna pelo fato de ser um framework do famoso JavaScript que é uma das linguagens mais utilizadas no mercado.
 
-## Development server
+Os requisitos para a utilização do AngularJS são minímos, basta incoporar o framework no seu projeto e utilizar.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+A documentação de AngularJS pode ser encontrada em https://docs.angularjs.org/api e toda ela está em inglês e em português pode ser encontrado conteúdo sobre em diversos sites e fóruns.
 
-## Code scaffolding
+Para instalar é necessário baixar também o NodeJS. Pois o AngularJS funciona como o FrontEnd e o NodeJS como o BackEnd. Assim, começando a instalação com o seguinte comando “npm install angular-material” com isto o npm irá baixar todos os arquivos do Angular Material.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Algumas das vantagem de se utilizar AngularJs se deve pelo fato de utilizar JavaScript e implementar MVC de forma bem clara, assim facilitando a sua aplicação.
+E alguma de suas desvantagens seria compilar todos os elementos do HTML antes de mostra-los no browser, exatamente tudo na aplicação é compilado, data-binding, directivas, etc… isso pode impactar no tempo de carregamento e no browser utilizado. E é mais recomendado utilizar em grandes projetos.
 
-## Build
+Comparando AngularJS com Vue.JS.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Angular é um framework muito complexo. Para começar a utiliza-lo é preciso ter conhecimento sobre: WebPack; Configurar Módulos Node.js; NPM; e TypeScript que é relativamente fácil.
 
-## Running unit tests
+Tendo esse pré conhecimento a curva de aprendizagem ainda é alta, A complexidade do Angular exige bom conhecimento da ferramenta.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Já o Vue.JS não precisa saber node, modules, NPM, nada. Como o Vue é simples ele não tem muitas funcionalidades e detalhes que você precisa estar atento. Então a curva de aprendizado é bem pequena. Mas mais fácil para iniciantes.
